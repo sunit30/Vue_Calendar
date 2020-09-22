@@ -2,16 +2,19 @@
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App" />
     {{ dates }}
+    <Dates v-bind:dates="dates" />
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import moment from "moment";
+import Dates from "./components/Dates/Dates";
 export default {
   name: "App",
   components: {
     HelloWorld,
+    Dates,
   },
   data() {
     return {
