@@ -1,7 +1,7 @@
 <template>
   <div>
-    <select name="month" @change="onSelect()" v-model="mont">
-      <option disabled value="">Please select one</option>
+    <select name="month" @change="onSelect()" v-model="selectedMonth">
+      <!-- <option disabled value="">Select month</option> -->
       <option value="0">January</option>
       <option value="1">February</option>
       <option value="2">March</option>
@@ -22,12 +22,12 @@
 export default {
   name: "MonthSelect",
   data() {
-    return { mont: "" };
+    return { selectedMonth: "8" };
   },
   methods: {
     onSelect: function() {
-      this.$emit("onSelect", this.mont);
-      console.log(this.mont);
+      this.$emit("onSelect", this.selectedMonth);
+      console.log(this.selectedMonth);
     },
   },
 };

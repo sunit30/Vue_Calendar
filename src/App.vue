@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <MonthSelect v-on:onSelect="onSelect" />
+    <MonthSelect v-on:onSelect="onSelectMonth" />
+    <YearSelect v-on:onSelect="onSelectYear" />
     <Dates v-bind:dates="dates" />
   </div>
 </template>
@@ -9,11 +10,13 @@
 import moment from "moment";
 import Dates from "./components/Dates/Dates";
 import MonthSelect from "./components/Dropdown/MonthSelect";
+import YearSelect from "./components/Dropdown/YearSelect";
 export default {
   name: "App",
   components: {
     Dates,
     MonthSelect,
+    YearSelect,
   },
   data() {
     return {
@@ -46,9 +49,14 @@ export default {
       });
       //console.log(this.dates);
     },
-    onSelect(month) {
+    onSelectMonth(month) {
       this.month = parseInt(month);
       console.log("out", typeof parseInt(month));
+      this.createCalendar();
+    },
+    onSelectYear(year) {
+      this.year = parseInt(year);
+      console.log("out", typeof parseInt(year));
       this.createCalendar();
     },
   },
