@@ -34,4 +34,17 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+select {
+  background-color: #f0bd12;
+  color: white;
+  padding: 3px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+option {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+</style>

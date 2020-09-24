@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-    <MonthSelect v-on:onSelect="onSelectMonth" />
-    <YearSelect v-on:onSelect="onSelectYear" />
-    <Dates v-bind:dates="dates" />
+    <div class="background">
+      <div class="container">
+        <div class="dropdown">
+          <MonthSelect v-on:onSelect="onSelectMonth" />
+          <YearSelect v-on:onSelect="onSelectYear" />
+        </div>
+        <Dates v-bind:dates="dates" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -73,5 +79,24 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.container {
+  background: url("./assets/b3.jpg");
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.background,
+html {
+  min-height: 100vh;
+  background-color: #f0bd12;
+}
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 700px) {
+  .container {
+    margin-top: 170px;
+  }
 }
 </style>
