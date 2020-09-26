@@ -1,4 +1,4 @@
-# vue_calendar
+# vue_calendar  Live - https://suspicious-gates-bfd1bf.netlify.app/
 
 ## Project setup
 ```
