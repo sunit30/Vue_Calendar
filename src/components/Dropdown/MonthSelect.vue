@@ -22,7 +22,7 @@
 export default {
   name: "MonthSelect",
   data() {
-    return { selectedMonth: "1" };
+    return { selectedMonth: "0" };
   },
   methods: {
     onSelect: function() {
