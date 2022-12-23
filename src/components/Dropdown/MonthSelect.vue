@@ -19,10 +19,11 @@
 </template>
 
 <script>
+import moment from "moment";
 export default {
   name: "MonthSelect",
   data() {
-    return { selectedMonth: "0" };
+    return { selectedMonth: `${moment().month()}` };
   },
   methods: {
     onSelect: function() {
