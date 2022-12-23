@@ -25,7 +25,7 @@ export default {
   name: "YearSelect",
   data() {
     return {
-      selectedYear: "2022",
+      selectedYear: "2023",
     };
   },
   methods: {
