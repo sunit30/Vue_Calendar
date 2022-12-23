@@ -21,11 +21,12 @@
 </template>
 
 <script>
+import moment from "moment";
 export default {
   name: "YearSelect",
   data() {
     return {
-      selectedYear: "2023",
+      selectedYear: `${moment().month()}`,
     };
   },
   methods: {
