@@ -26,7 +26,7 @@ export default {
   name: "YearSelect",
   data() {
     return {
-      selectedYear: `${moment().month()}`,
+      selectedYear: `${moment().year()}`,
     };
   },
   methods: {
